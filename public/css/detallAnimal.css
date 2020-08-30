@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px) {
+  
+  #explotacio {    
+        font-size: 20px !important;
+    }
+    
+    #explotacio_container{
+        width: 100% !important;
+    } 
+}
