@@ -17,6 +17,8 @@ class CreateLletTable extends Migration
             $table->increments("ID");
             $table->string("Nom", 200);
             $table->string("Tipus", 50);
+            $table->string("Quantitat", 200);
+            $table->string("Unitat", 200);
             $table->float("Preu_Unitat");
             $table->timestamps();
         });

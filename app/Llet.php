@@ -11,6 +11,8 @@ class Llet extends Model
     protected $fillable = [
         'Nom',
         'Tipus',
+        'Quantitat',
+        'Unitat',
         'Preu_Unitat'
     ];
 }

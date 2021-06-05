@@ -75,7 +75,7 @@ function PopupDeletePinso(target){
     if(target.tagName == "I") nom = target.id;
     else nom = target.children[0].id;
 
-    text.innerHTML = "Desitgeu eliminar el pinso '<strong>"+nom+"</strong>' ?"
+    text.innerHTML = "Desitgeu eliminar la vacuna '<strong>"+nom+"</strong>' ?"
 
     btn.click();   
 }
@@ -89,6 +89,7 @@ si.addEventListener("click", ()=> {
     form.submit();
 });
 /////////////////// END PINSO MODAL /////////////////////////
+
 
 
 

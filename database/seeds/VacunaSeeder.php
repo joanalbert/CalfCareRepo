@@ -26,6 +26,11 @@ class VacunaSeeder extends Seeder
          'DiesPrimeraDosi' => 76,    
         ],
         [
+         'Nom' => 'StopBaldnessNow',
+         'DiesPeriode' => 21,
+         'DiesPrimeraDosi' => 76,    
+        ],
+        [
          'Nom' => 'IBR',
          'DiesPeriode' => 182,
          'DiesPrimeraDosi' => 121,  

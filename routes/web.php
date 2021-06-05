@@ -22,11 +22,14 @@ Route::get('/', function () {
 //rutes de autentificacio d'usuaris
 Auth::routes();
 
+
 Route::group(['middleware' => ['auth']],function(){
     
-    Route::get('/main', function(){
-        return view('main');
-    });
+        
+    Route::get('/main', [
+        'as' => 'mainMenu',
+        'uses' => 'TaskController@index'
+    ]);
     
     Route::post('/buscarAnimal', [
         'as' => 'buscarAnimal',
@@ -45,8 +48,11 @@ Route::group(['middleware' => ['auth']],function(){
     //rutes CRUD Pinso
     Route::resource('Pinso', 'PinsoController');  
     
-    //rutes Vacuna
+    //rutes CRUD Vacuna
     Route::resource('Vacuna', 'VacunaController');
+    
+    //rutes CRUD Task
+    Route::resource('Task', 'TaskController');
 });
 
 

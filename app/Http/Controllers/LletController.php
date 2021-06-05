@@ -14,7 +14,8 @@ class LletController extends Controller
      */
     public function index()
     {
-        //
+        $llets = Llet::all(); 
+        return view('altaLlet', compact('llets'));
     }
 
     /**
@@ -34,8 +35,14 @@ class LletController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {        
+        $llet = new Llet($_POST);
+        
+        if($llet->Tipus == "Liquida") $llet->Unitat = "L";
+        else if ($llet->Tipus == "En pols") $llet->Unitat = "Kg";
+        
+        Llet::insert($llet->attributesToArray());
+        return $this->index();
     }
 
     /**
@@ -78,8 +85,9 @@ class LletController extends Controller
      * @param  \App\Llet  $llet
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Llet $llet)
+    public function destroy($lletID)
     {
-        //
+        Llet::where('ID', $lletID)->delete();
+        return $this->index();
     }
 }

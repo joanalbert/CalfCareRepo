@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(LletTableSeeder::class);
         $this->call(PinsoTableSeeder::class);
         $this->call(VacunaSeeder::class);
+        $this->call(TasksTableSeeder::class);
     }
 }

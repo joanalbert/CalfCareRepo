@@ -17,7 +17,8 @@ class CreateTasquesTable extends Migration
             $table->increments('ID');
             $table->enum('acabada', ['SI','NO']);
             $table->string('Observacions', 300);
-            $table->date('Data');
+            $table->date('DataInici');
+            $table->date('DataFi');
             $table->timestamps();
         });
     }

@@ -30,36 +30,37 @@
                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                        
                        <ul class="navbar-nav mr-auto" id="mainMenuList">
-                           <li class="nav-item active m-1 bg-success rounded p-1">
-                               <a class="nav-link text-white" href="{{route('Animal.index')}}">Llistat Animals &nbsp;<i class="fas fa-list"></i></a>
+                           
+                           <li class="nav-item m-1 bg-success rounded p-1">
+                                <a class="nav-link text-white" href="{{url('/main')}}">Menu Principal &nbsp;<i class="fas fa-home"></i></a>                             
+                            </li>
+                           
+                           <li class="nav-item m-1 bg-success rounded p-1">
+                               <a class="nav-link text-white" href="{{route('Animal.create')}}">Alta Animals &nbsp;<i class="fas fa-plus-square"></i></a>                              
                            </li>
                            
                            <li class="nav-item m-1 bg-success rounded p-1">
-                               <a class="nav-link text-white" href="{{route('Animal.create')}}">Alta Animal &nbsp;<i class="fas fa-plus-square"></i></a>                              
+                               <a class="nav-link text-white" href="{{ route('Pinso.index') }}">Pinsos &nbsp;<i class="fas fa-glass-whiskey"></i></a>
                            </li>
                            
+                           <li class="nav-item m-1 bg-success rounded p-1">
+                               <a class="nav-link text-white" href="{{ route('Llet.index') }}">Llets &nbsp;<i class="fas fa-prescription-bottle"></i></a>
+                           </li>
+                           
+                           <li class="nav-item m-1 bg-success rounded p-1">
+                               <a class="nav-link text-white" href="{{ route('Vacuna.index') }}">Vacunes &nbsp;<i class="fas fa-syringe"></i></a>
+                           </li>
+                           
+                           <li class="nav-item active m-1 bg-success rounded p-1">
+                               <a class="nav-link text-white" href="{{route('Animal.index')}}">Llistat Animals &nbsp;<i class="fas fa-list"></i></a>
+                           </li>
+                                                                           
                            <li class="nav-item m-1 bg-success rounded p-1">
                                <a class="nav-link text-white" href="#">Grafiques Llet i Pinso &nbsp;<i class="fas fa-chart-line"></i></a>
                            </li>
                            
-                           <li class="nav-item m-1 bg-success rounded p-1">
-                               <a class="nav-link text-white" href="{{ route('Pinso.index') }}">Alta Pinso &nbsp;<i class="fas fa-plus-square"></i></a>
-                           </li>
                            
-                           <li class="nav-item m-1 bg-success rounded p-1">
-                               <a class="nav-link text-white" href="">Alta Llet &nbsp;<i class="fas fa-plus-square"></i></a>
-                           </li>
-                           
-                           <li class="nav-item m-1 bg-success rounded p-1">
-                               <a class="nav-link text-white" href="#">Llistat Llet/Pinso &nbsp;<i class="fas fa-list"></i></a>                             
-                           </li>
-                           
-                           @if(Request::path() != 'main')
-                            <li class="nav-item m-1 bg-success rounded p-1">
-                                <a class="nav-link text-white" href="{{url('/main')}}">Menu Principal &nbsp;<i class="fas fa-home"></i></a>                             
-                            </li>
-                           @endif
-                           
+                        
                        </ul>
 
                        <div class="d-flex  justify-content-start">

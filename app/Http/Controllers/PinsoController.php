@@ -37,6 +37,9 @@ class PinsoController extends Controller
     public function store(Request $request)
     {
         //
+        $pinso = new Pinso($_POST);
+        Pinso::insert($pinso->attributesToArray());
+        return $this->index();
     }
 
     /**
